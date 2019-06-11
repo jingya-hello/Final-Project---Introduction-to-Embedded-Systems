@@ -38,31 +38,35 @@ alt="Our video (fail to load the image, please click here to see the video)" wid
 ## Implementations
 
 1. 切換模式：
-|IR remote|0|100+|200+|
-|---|---|---|---|
-|State|Off mode→Auto mode<br>Auto or Control→Off mode|If(!Off mode)Auto mode|If(!Off mode)Control mode|
+
+    |IR remote|0|100+|200+|
+    |---|---|---|---|
+    |State|Off mode→Auto mode<br>Auto or Control→Off mode|If(!Off mode)Auto mode|If(!Off mode)Control mode|
     
     * Off Mode：關機狀態，按0可切換至Auto Mode
     * Auto Mode：自走狀態，偵測障礙物自行移動
     * Control Mode：控制狀態，可使用IRremote控制前後左右
 
 2. 直流馬達：
-* 左馬達/右馬達
-|Pin1|Pin2|動作|
-|---|---|---|
-|High|Low|馬達1前進|
-|Low|High|馬達1後退|
-|High|High|馬達1停止|
-|Low|Low|馬達1滑行|
-* 車子行駛
-|左馬達|右馬達|動作|
-|---|---|---|
-|前進|前進|車子前進|
-|後退|後退|車子後退|
-|前進|後退|車子右轉|
-|後退|前進|車子左轉|
-|前進|滑行|車子向右自轉|
-|停止|停止|車子煞車|
+    * 左馬達/右馬達
+
+        |Pin1|Pin2|動作|
+        |---|---|---|
+        |High|Low|馬達1前進|
+        |Low|High|馬達1後退|
+        |High|High|馬達1停止|
+        |Low|Low|馬達1滑行|
+
+    * 車子行駛
+    
+        |左馬達|右馬達|動作|
+        |---|---|---|
+        |前進|前進|車子前進|
+        |後退|後退|車子後退|
+        |前進|後退|車子右轉|
+        |後退|前進|車子左轉|
+        |前進|滑行|車子向右自轉|
+        |停止|停止|車子煞車|
         
 3. 車子自走及閃避障礙：
 利用Ultrasonic module置於車前，偵測前方與障礙物的距離：
